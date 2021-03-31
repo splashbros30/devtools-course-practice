@@ -1,21 +1,13 @@
 // Copyright 2021 Denis Nikolaev
 
 #include <gtest/gtest.h>
-
 #include <iostream>
-
 #include <tuple>
-
 #include <cmath>
-
 #include <complex>
-
 #include <vector>
-
 #include <list>
-
 #include <limits>
-
 #include "include/complex_number.h"
 
 TEST(Nikolaev_Denis_ComplexNumberTest, Can_Use_List) {
