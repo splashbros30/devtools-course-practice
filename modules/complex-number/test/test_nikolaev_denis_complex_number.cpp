@@ -27,17 +27,16 @@ TEST(Nikolaev_Denis_ComplexNumberTest, Can_Use_List) {
     ASSERT_EQ(n1, *ls.begin());
 }
 
-TEST(Nikolaev_Denis_ComplexNumberTest, Copy_Constructor) {
-    // Arrange
-    ComplexNumber a(6.4, 2.1);
+TEST(Nikolaev_Denis_ComplexNumberTest, Copy_Constructor_And_Operator_Equal) {
+    ComplexNumber a(1.3, 2.5);
 
-    // Act
     ComplexNumber b(a);
-    ComplexNumber c(b);
+    ComplexNumber c = a;
 
-    // Assert
     ASSERT_DOUBLE_EQ(a.getRe(), c.getRe());
     ASSERT_DOUBLE_EQ(a.getIm(), c.getIm());
+    ASSERT_DOUBLE_EQ(a.getRe(), b.getRe());
+    ASSERT_DOUBLE_EQ(a.getIm(), b.getIm());
 }
 
 TEST(Nikolaev_Denis_ComplexNumberTest, Can_Substract) {
