@@ -27,7 +27,7 @@ TEST(Nikolaev_Denis_ComplexNumberTest, Can_Use_List) {
     ASSERT_EQ(n1, *ls.begin());
 }
 
-TEST(Nikolaev_Denis_ComplexNumberTest, Equals_Origin) {
+TEST(Nikolaev_Denis_ComplexNumberTest, Copy_Constructor) {
     // Arrange
     ComplexNumber a(6.4, 2.1);
 
@@ -41,12 +41,13 @@ TEST(Nikolaev_Denis_ComplexNumberTest, Equals_Origin) {
 }
 
 TEST(Nikolaev_Denis_ComplexNumberTest, Can_Substract) {
-    ComplexNumber a(5.0, -3.0);
-    ComplexNumber b(2.0, 5.0);
-    ComplexNumber c(16.0, -10.0);
+    ComplexNumber a(3.0, 5.0);
+    ComplexNumber b(2.0, 7.0);
+    ComplexNumber c(17.0, 19.0);
 
-    ComplexNumber res1(9.0, -12.0);
+    ComplexNumber res1(12.0, 7.0);
     ComplexNumber res2 = c - a - b;
 
-    ASSERT_EQ(res1, res2);
+    ASSERT_EQ(res2.getRe(), res1.getRe());
+    ASSERT_EQ(res2.getIm(), res1.getIm());
 }
