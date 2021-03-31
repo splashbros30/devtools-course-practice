@@ -23,7 +23,7 @@ TEST(Nikolaev_Denis_ComplexNumberTest, Can_Use_List) {
     ls.push_back(n1);
     ls.push_back(n2);
     ls.push_back(n3);
-    
+
     ASSERT_EQ(n1, *ls.begin());
 }
 
