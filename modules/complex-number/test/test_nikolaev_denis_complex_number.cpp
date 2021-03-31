@@ -44,13 +44,13 @@ TEST(Nikolaev_Denis_ComplexNumberTest, Vector_Complex_Summ) {
     ComplexNumber sum1;
     std::complex<double> sum2(0.0, 0.0);
 
-    for (int i = 0; i < vec1.size(); i++) {
+    for (int i = 0; i < static_cast<int>(vec1.size()); i++) {
         sum1 = sum1 + vec1[i];
         sum2 = sum2 + vec2[i];
     }
 
-    ASSERT_DOUBLE_EQ(sum1.getRe(), sum2.real());
-    ASSERT_DOUBLE_EQ(sum1.getIm(), sum2.imag());
+    ASSERT_DOUBLE_EQ(sum1.getRe(), static_cast<double>(sum2.real()));
+    ASSERT_DOUBLE_EQ(sum1.getIm(), static_cast<double>(sum2.imag()));
 }
 
 TEST(Nikolaev_Denis_ComplexNumberTest, Can_Substract) {
