@@ -8,6 +8,10 @@
 
 #include <cmath>
 
+#include <complex>
+
+#include <vector>
+
 #include <list>
 
 #include <limits>
@@ -27,16 +31,26 @@ TEST(Nikolaev_Denis_ComplexNumberTest, Can_Use_List) {
     ASSERT_EQ(n1, *ls.begin());
 }
 
-TEST(Nikolaev_Denis_ComplexNumberTest, Copy_Constructor_And_Operator_Equal) {
-    ComplexNumber a(1.3, 2.5);
+TEST(Nikolaev_Denis_ComplexNumberTest, Vector_Complex_Summ) {
+    ComplexNumber a(1.0, 2.0);
+    ComplexNumber b(2.0, 4.0);
 
-    ComplexNumber b(a);
-    ComplexNumber c = a;
+    std::complex<double> c(1.0, 2.0);
+    std::complex<double> d(2.0, 4.0);
 
-    ASSERT_DOUBLE_EQ(a.getRe(), c.getRe());
-    ASSERT_DOUBLE_EQ(a.getIm(), c.getIm());
-    ASSERT_DOUBLE_EQ(a.getRe(), b.getRe());
-    ASSERT_DOUBLE_EQ(a.getIm(), b.getIm());
+    std::vector<ComplexNumber> vec1 = {a, b};
+    std::vector<std::complex<double>> vec2 = {c, d};
+
+    ComplexNumber sum1;
+    std::complex<double> sum2;
+
+    for (int i = 0; i < vec1.size(); i++) {
+        sum1 = sum1 + vec1[i];
+        sum2 = sum2 + vec2[i];
+    }
+
+    ASSERT_EQ(sum1.getRe(), sum2.real());
+    ASSERT_EQ(sum1.getIm(), sum2.imag());
 }
 
 TEST(Nikolaev_Denis_ComplexNumberTest, Can_Substract) {
