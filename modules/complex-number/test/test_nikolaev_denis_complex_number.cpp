@@ -49,8 +49,8 @@ TEST(Nikolaev_Denis_ComplexNumberTest, Vector_Complex_Summ) {
         sum2 = sum2 + vec2[i];
     }
 
-    ASSERT_EQ(sum1.getRe(), sum2.real());
-    ASSERT_EQ(sum1.getIm(), sum2.imag());
+    ASSERT_DOUBLE_EQ(sum1.getRe(), sum2.real());
+    ASSERT_DOUBLE_EQ(sum1.getIm(), sum2.imag());
 }
 
 TEST(Nikolaev_Denis_ComplexNumberTest, Can_Substract) {
