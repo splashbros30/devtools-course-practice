@@ -42,7 +42,7 @@ TEST(Nikolaev_Denis_ComplexNumberTest, Vector_Complex_Summ) {
     std::vector<std::complex<double>> vec2 = {c, d};
 
     ComplexNumber sum1;
-    std::complex<double> sum2;
+    std::complex<double> sum2(0.0, 0.0);
 
     for (int i = 0; i < vec1.size(); i++) {
         sum1 = sum1 + vec1[i];
