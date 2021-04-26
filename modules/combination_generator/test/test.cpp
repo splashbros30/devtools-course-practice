@@ -83,13 +83,12 @@ TEST(Combination_Generate, Test4) {
 }
 
 
-TEST(Permutation_Generate, Test5_false) {
-    int n = 3;
+TEST(Permutation_Generate, Test5) {
+    int n = 2;
     int m = 2;
     generator g;
-    int h = n > m ? n : m;
-    int* a = new int[h];
-    for (int i = 0; i < h; i++)
+    int* a = new int[n];
+    for (int i = 0; i < n; i++)
         a[i] = 1;
 
     for (int i = 0; i < 15; i++) {
@@ -97,7 +96,7 @@ TEST(Permutation_Generate, Test5_false) {
     }
 
 
-    int res[] = { 3, 3 };
+    int res[] = { 2, 2 };
     for (int i = 0; i < m; i++) {
         ASSERT_EQ(a[i], res[i]);
     }
