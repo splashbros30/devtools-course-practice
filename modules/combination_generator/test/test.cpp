@@ -2,7 +2,7 @@
 #include <gtest/gtest.h>
 #include "include/generator.h"
 
-TEST(Combination_Generate, Test1) {
+TEST(Combination_Generate, Test1_Combination_Of_5_For_2) {
     int n = 5;
     int m = 2;
     generator g;
@@ -22,7 +22,7 @@ TEST(Combination_Generate, Test1) {
     }
 }
 
-TEST(Combination_Generate, Test2) {
+TEST(Combination_Generate, Test2_Combination_Of_7_For_3) {
     int n = 7;
     int m = 3;
     generator g;
@@ -42,7 +42,7 @@ TEST(Combination_Generate, Test2) {
     }
 }
 
-TEST(Combination_Generate, Test3) {
+TEST(Combination_Generate, Test3_Combination_Of_100_For_5) {
     int n = 100;
     int m = 5;
     generator g;
@@ -62,7 +62,8 @@ TEST(Combination_Generate, Test3) {
     }
 }
 
-TEST(Combination_Generate, Test4) {
+TEST(Combination_Generate,
+    Test4_Combination_Of_4_For_6_With_Using_The_Great_Features_Of_NextSet) {
     int n = 4;
     int m = 6;
     generator g;
@@ -83,7 +84,8 @@ TEST(Combination_Generate, Test4) {
 }
 
 
-TEST(Permutation_Generate, Test5) {
+TEST(Permutation_Generate,
+    Test5_Combination_Of_2_For_2_With_Using_False_In_NextSet) {
     int n = 2;
     int m = 2;
     generator g;
