@@ -43,20 +43,6 @@ TEST(Combination_Generate, Test2) {
 }
 
 TEST(Combination_Generate, Test3) {
-    int n = 15;
-    int m = 0;
-    generator g;
-    bool b = false;
-    int h = n > m ? n : m;
-    int* a = new int[h];
-    for (int i = 0; i < h; i++)
-        a[i] = 1;
-    for (int i = 0; i < m; i++) {
-        ASSERT_EQ(g.NextSet(&a, n, m), b);
-    }
-}
-
-TEST(Combination_Generate, Test4) {
     int n = 100;
     int m = 5;
     generator g;
@@ -76,7 +62,7 @@ TEST(Combination_Generate, Test4) {
     }
 }
 
-TEST(Combination_Generate, Test5) {
+TEST(Combination_Generate, Test4) {
     int n = 4;
     int m = 6;
     generator g;
@@ -96,3 +82,23 @@ TEST(Combination_Generate, Test5) {
     }
 }
 
+
+TEST(Permutation_Generate, Test5_false) {
+    int n = 3;
+    int m = 2;
+    generator g;
+    int h = n > m ? n : m;
+    int* a = new int[h];
+    for (int i = 0; i < h; i++)
+        a[i] = 1;
+
+    for (int i = 0; i < 15; i++) {
+        g.NextSet(&a, n, m);
+    }
+
+
+    int res[] = { 3, 3 };
+    for (int i = 0; i < m; i++) {
+        ASSERT_EQ(a[i], res[i]);
+    }
+}
