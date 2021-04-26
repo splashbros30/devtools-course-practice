@@ -12,7 +12,7 @@ TEST(Combination_Generate, Test1) {
         a[i] = 1;
 
     for (int i = 0; i < 5; i++) {
-        g.NextSet(&a, n, m);
+        g.NextSet(a, n, m);
     }
 
 
@@ -32,7 +32,7 @@ TEST(Combination_Generate, Test2) {
         a[i] = 1;
 
     for (int i = 0; i < 8; i++) {
-        g.NextSet(&a, n, m);
+        g.NextSet(a, n, m);
     }
 
 
@@ -52,7 +52,7 @@ TEST(Combination_Generate, Test3) {
         a[i] = 1;
 
     for (int i = 0; i < 58; i++) {
-        g.NextSet(&a, n, m);
+        g.NextSet(a, n, m);
     }
 
 
@@ -72,7 +72,7 @@ TEST(Combination_Generate, Test4) {
         a[i] = 1;
 
     for (int i = 0; i < 15; i++) {
-        g.NextSet(&a, n, m);
+        g.NextSet(a, n, m);
     }
 
 
@@ -92,7 +92,7 @@ TEST(Permutation_Generate, Test5) {
         a[i] = 1;
 
     for (int i = 0; i < 15; i++) {
-        g.NextSet(&a, n, m);
+        g.NextSet(a, n, m);
     }
 
 

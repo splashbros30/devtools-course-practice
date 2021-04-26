@@ -5,13 +5,13 @@
 
 
 
-bool generator::NextSet(int** a, int n, int m) {
+bool generator::NextSet(int* a, int n, int m) {
     int j = m - 1;
-    while ((*a)[j] == n && j >= 0) j--;
+    while (a[j] == n && j >= 0) j--;
     if (j < 0) return false;
-    (*a)[j]++;
+    a[j]++;
     if (j == m - 1) return true;
     for (int k = j + 1; k < m; k++)
-        (*a)[k] = (*a)[j];
+        a[k] = a[j];
     return true;
 }

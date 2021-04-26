@@ -5,7 +5,7 @@
 
 class generator {
  public:
-    bool NextSet(int** a, int n, int m);
+    bool NextSet(int* a, int n, int m);
 };
 
 #endif  // MODULES_COMBINATION_GENERATOR_INCLUDE_GENERATOR_H_
