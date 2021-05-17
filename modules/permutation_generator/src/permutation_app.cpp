@@ -28,7 +28,7 @@ bool Permutation_App::validateNumberOfArguments(int argc, const char** argv) {
         help(argv[0]);
         return false;
     } else if (argc != 3) {
-        help(argv[0], "ERROR: Should be 2 arguments.\n\n");
+        help(argv[0], "ERROR: Should be 3 arguments.\n\n");
         return false;
     }
     return true;

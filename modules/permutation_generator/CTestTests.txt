@@ -20,19 +20,19 @@ set_tests_properties (${prefix}_can_Detect_Incorrect_Number PROPERTIES
     LABELS "${MODULE}")
 
 add_test(
-    NAME ${prefix}_Check_Number_Of_Arguments_thirteen
+    NAME ${prefix}_Check_Number_Format
     COMMAND ${APPLICATION} q q
 )
-set_tests_properties (${prefix}_Check_Number_Of_Arguments_thirteen PROPERTIES
+set_tests_properties (${prefix}_Check_Number_Format PROPERTIES
     PASS_REGULAR_EXPRESSION "Wrong number format!"
     LABELS "${MODULE}")
 
 add_test(
-    NAME ${prefix}_Check_Number_Of_Arguments_eleven
+    NAME ${prefix}_Check_Number_Of_Arguments
     COMMAND ${APPLICATION} 1 2 3
 )
-set_tests_properties (${prefix}_Check_Number_Of_Arguments_eleven PROPERTIES
-    PASS_REGULAR_EXPRESSION "ERROR: Should be 2 arguments."
+set_tests_properties (${prefix}_Check_Number_Of_Arguments PROPERTIES
+    PASS_REGULAR_EXPRESSION "ERROR: Should be 3 arguments."
     LABELS "${MODULE}")
 
 add_test(
